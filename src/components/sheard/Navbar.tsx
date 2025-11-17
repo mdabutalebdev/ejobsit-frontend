@@ -19,11 +19,11 @@ const Navbar = () => {
         </div>
         <div className="flex items-center gap-8">
             <Link href="/">Home</Link>
-            <Link href="/">Courses </Link>
-            <Link href="/">Products </Link>
-            <Link href="/">Events</Link>
-            <Link href="/">About </Link>
-            <Link href="/">Contact  </Link>
+            <Link href="/course">Course</Link>
+            <Link href="/product">Product</Link>
+            <Link href="/event">Event</Link>
+            <Link href="/about">About </Link>
+            <Link href="/contact">Contact  </Link>
         </div>
         <div className="flex items-center gap-2">
             <button className="text-[#067FDA]">
