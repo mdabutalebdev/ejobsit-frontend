@@ -1,10 +1,11 @@
+import Hero from "./homeComponents/Hero";
+
  
 
 export default function Home() {
   return (
      <div>
-
-      welcome to our Website
+      <Hero />
      </div>
   );
 }
