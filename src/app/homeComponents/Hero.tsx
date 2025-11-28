@@ -1,13 +1,61 @@
-import React from 'react'
+import Button from '@/components/sheard/Button';
+import Link from 'next/link';
+import React from 'react';
+import { FaBookOpen } from 'react-icons/fa';
+import { TfiAgenda } from "react-icons/tfi";
 
-const Hero = () => {
-  return (
-    <div className='container mx-auto px-20'> 
-        <h1 className='text-5xl text-center'>Welcome there</h1>
-        <p className='text-center w-[500px]'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores cupiditate, facilis dignissimos harum architecto ratione laudantium reiciendis accusamus quasi, omnis fugit, eligendi asperiores aut quisquam. Reiciendis nemo, quos vel quasi, vero reprehenderit tempora magni asperiores quis quod qui sunt et! Fugiat ducimus iure blanditiis non veniam alias, corrupti, aut, impedit nemo repudiandae quae distinctio esse quo facilis? Ea, modi consequuntur?</p>
-        <p className='text-center w-[500px]'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores cupiditate, facilis dignissimos harum architecto ratione laudantium reiciendis accusamus quasi, omnis fugit, eligendi asperiores aut quisquam. Reiciendis nemo, quos vel quasi, vero reprehenderit tempora magni asperiores quis quod qui sunt et! Fugiat ducimus iure blanditiis non veniam alias, corrupti, aut, impedit nemo repudiandae quae distinctio esse quo facilis? Ea, modi consequuntur?</p>
-    </div>
-  )
-}
+const Hero: React.FC = () => {
+    return (
+        <div className='bg-[#E6F0FF]'>
+            <div className="container mx-auto px-4 md:px-12">
+                <div className='flex flex-col lg:flex-row items-start lg:items-center justify-between gap-10 lg:gap-0 py-12'>
 
-export default Hero
+                    {/* Left: Text Content */}
+                    <div className='w-full lg:w-1/2 space-y-6 lg:space-y-8'>
+                        <p className='flex items-center gap-2 text-lg font-bold'>
+                            <TfiAgenda className='text-[#1F6CF0]' />
+                            Unlock Your Brilliance
+                        </p>
+                        <h1 className='text-3xl sm:text-4xl md:text-5xl font-bold leading-[1.4]'>
+                            Turn into an IT Expert & <br /> Own the <span className='text-[#1F6CF0]'>Digital Space</span>
+                        </h1>
+                        <p className='text-sm sm:text-base md:text-base lg:text-lg'>
+                            At Edunexi IT, we aim to transform talent into valuable assets. With expert mentors and an up-to-date curriculum, we’re here to elevate your learning journey. Choose from over 45 cutting-edge courses and kickstart your path to success.
+                        </p>
+
+                        <div className='flex flex-col sm:flex-row gap-4 sm:gap-6'>
+                            <Link href="/courses">
+                                <Button className='w-full sm:w-auto flex items-center justify-center gap-2'>
+                                    <FaBookOpen /> Browse Course
+                                </Button>
+                            </Link>
+
+                            <Button
+                                className='w-full sm:w-auto flex items-center justify-center gap-2'
+                            >
+                                <FaBookOpen /> Join Free Seminar
+                            </Button>
+                        </div>
+                    </div>
+
+                    {/* Right: Video */}
+                    <div className='w-full lg:w-1/2 mt-6 lg:mt-0 flex justify-center'>
+                        <div className='w-full max-w-[660px] aspect-video rounded-2xl overflow-hidden border border-white'>
+                            <iframe
+                                className='w-full h-full'
+                                src="https://www.youtube.com/embed/aaGKqW5zREU?si=xqCGttWJFNcEKDBS"
+                                title="YouTube video player"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                referrerPolicy="strict-origin-when-cross-origin"
+                                allowFullScreen
+                            ></iframe>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    );
+};
+
+export default Hero;
