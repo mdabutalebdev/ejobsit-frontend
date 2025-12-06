@@ -1,8 +1,13 @@
-import React from 'react'
+'use client'
 
-const aboutPage = () => {
+
+const aboutPage : React.FC = () => {
   return (
-    <div>aboutPage</div>
+    <div>
+      <div className="container mx-auto px-4 md:px-12">
+
+      </div>
+    </div>
   )
 }
 
